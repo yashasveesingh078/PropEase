@@ -1,0 +1,420 @@
+/* ========= GLOBAL ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fa;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo {
+    font-size:2.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #2b6ef3;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size:20px;
+    font-weight: 500;
+    color: #444;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #2b6ef3;
+}
+
+.login-btn {
+    padding: 15px 25px;
+    background: #2b6ef3;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    
+}
+
+.login-btn:hover {
+    opacity: 0.85;
+}
+
+/* ========= HERO ========= */
+.hero {
+    height: 90vh;
+    background: url("https://cdn.confident-group.com/wp-content/uploads/2024/12/27102928/types-of-real-estate-cover.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero p {
+    margin: 18px 0 30px;
+    font-size: 1.1rem;
+}
+
+/* ========= SEARCH BOX ========= */
+.search-box {
+    margin-top: 25px;
+    display: flex;
+    gap: 18px;
+    padding: 25px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 100%;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.field input,
+.field select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    background: #2b6ef3;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    opacity: 0.85;
+}
+
+.hero-stats {
+    margin-top: 25px;
+    display: flex;
+    gap: 40px;
+}
+
+.hero-stats div {
+    text-align: center;
+}
+
+.hero-stats strong {
+    font-size: 1.6rem;
+    display: block;
+}
+
+/* ========= FEATURED ========= */
+.featured-section {
+    padding: 80px 6%;
+    text-align: center;
+
+}
+
+.badge-light {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #e9f0ff;
+    border-radius: 20px;
+    color: #2b6ef3;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.properties-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 30px;
+}
+
+.property-card {
+    background: white;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+.for-sale { background: #2dbf54; }
+.for-rent { background: #2b6ef3; }
+
+.card-body {
+    padding: 12px;
+    text-align: left;
+}
+
+.card-body h3 {
+    color: #2b6ef3;
+    font-size: 1.3rem;
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.location {
+    font-size: 0.9rem;
+    margin-top: 4px;
+    color: #777;
+}
+
+.details {
+    margin-top: 12px;
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+}
+
+/* ========= CENTER BUTTON ========= */
+.center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-btn {
+    padding: 12px 30px;
+    background: #2b6ef3;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    opacity: 0.85;
+}
+
+/* ========= WHY US ========= */
+.why-us {
+    padding: 80px 6%;
+    display: flex;
+    gap: 60px;
+}
+
+.why-left {
+    flex: 1.2;
+}
+
+.why-left h2 {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+}
+
+.why-left ul {
+    margin: 20px 0;
+    list-style: none;
+}
+
+.why-left ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.why-left ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2b6ef3;
+}
+
+.learn-btn {
+    padding: 12px 26px;
+    background: #2b6ef3;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.why-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.feature-box {
+    background: #f1f5ff;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.feature-box h4 {
+    margin-bottom: 6px;
+    color: #2b6ef3;
+}
+
+/* ========= CTA ========= */
+.cta {
+    text-align: center;
+    padding: 50px 6%;
+    background-color:navy;
+    color: white;
+}
+
+.cta-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.browse-btn,
+.contact-btn {
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.browse-btn {
+    background: white;
+    color: #2b6ef3;
+}
+
+.contact-btn {
+    background:white;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+    background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202507/can-natural-light-in-architecture-enhance-well-being-and-design-062020877-16x9_0.jpg?VersionId=ISh0JiQCvGmhJRsGpErHuGDQbZdOLzml&size=690:388");
+    color: #e5e5e5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px 6%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer h4 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.footer-col a {
+    display: block;
+    margin: 6px 0;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.footer-col p {
+    color: #ccc;
+    margin-bottom: 6px;
+}
+
+.footer .logo {
+    font-size: 1.4rem;
+}
+
+
+
+
