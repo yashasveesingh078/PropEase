@@ -1,4 +1,5 @@
 /* ========= GLOBAL ========= */
+
 * {
     margin: 0;
     padding: 0;
@@ -500,5 +501,119 @@ body.dark-mode .service-card {
     cursor: pointer;
     display: none;
     z-index: 1000;
+}
+/* =========================================================
+   RESPONSIVE FIXES FOR HOMEPAGE (ADD AT BOTTOM OF CSS FILE)
+   ========================================================= */
+
+/* 1️⃣ SEARCH BOX – Prevent overflow */
+@media (max-width: 1200px) {
+    .search-box {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+/* 2️⃣ HERO SECTION – scale text + center content */
+@media (max-width: 992px) {
+    .hero {
+        padding: 40px 4%;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+    }
+}
+
+/* 3️⃣ MOBILE NAVBAR – collapse into dropdown */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+
+    .login-btn {
+        display: none;
+    }
+}
+
+/* 4️⃣ PROPERTIES GRID – make single column on mobile */
+@media (max-width: 768px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+/* 5️⃣ WHY US – stack sections vertically */
+@media (max-width: 900px) {
+    .why-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-right {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 6️⃣ CTA – stack buttons on small screens */
+@media (max-width: 600px) {
+    .cta-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .browse-btn, 
+    .contact-btn {
+        width: 100%;
+    }
+}
+
+/* 7️⃣ FOOTER – responsive stacking */
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    .footer-col p,
+    .footer-col a {
+        font-size: 0.95rem;
+    }
 }
 
