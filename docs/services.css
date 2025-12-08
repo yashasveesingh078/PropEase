@@ -353,11 +353,7 @@ body.dark-mode .service-card {
   color: #f1f1f1 !important;
 }
 
-/* FLASH CARD FLIP */
-.flipped {
-  transform: rotateY(180deg);
-  transition: transform 0.6s;
-}
+
 
 
 

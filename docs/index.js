@@ -1,43 +1,83 @@
-// Wait until page loads
-document.addEventListener("DOMContentLoaded", () => {
+// NAVBAR BURGER MENU
 
-  /* -------------------------
-     1. LIGHT / DARK MODE TOGGLE
-  ------------------------- */
-  const themeBtn = document.createElement("button");
-  themeBtn.textContent = "Toggle Dark Mode";
-  themeBtn.style.position = "fixed";
-  themeBtn.style.bottom = "20px";
-  themeBtn.style.right = "20px";
-  themeBtn.style.padding = "10px 15px";
-  themeBtn.style.cursor = "pointer";
-  document.body.appendChild(themeBtn);
+const burger = document.getElementById("burger");
+const navLinks = document.querySelector(".nav-links");
 
-  themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-
-  /* -------------------------
-     2. FLASH CARD SIMPLE FLIP
-     (works if you have cards with .property-card or .service-card)
-  ------------------------- */
-  const cards = document.querySelectorAll(".property-card, .service-card");
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      card.classList.toggle("flipped");
+if (burger) {
+    burger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
     });
-  });
+}
 
-  /* -------------------------
-     3. SIMPLE BUTTON ALERT
-  ------------------------- */
-  const buttons = document.querySelectorAll("button, .btn-outline, .btn-primary, .login-btn");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      alert("Button clicked!");
+
+
+
+// DARK MODE TOGGLE
+
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        // Change icon
+        if (document.body.classList.contains("dark-mode")) {
+            themeToggle.textContent = "☀️";
+        } else {
+            themeToggle.textContent = "🌙";
+        }
     });
-  });
+}
 
+
+
+
+// SCROLL TO TOP BUTTON
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
 });
+
+if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+}
+// SHOW WELCOME ALERT ONLY ON HOME PAGE
+
+if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
+    window.addEventListener("load", () => {
+        alert("Welcome to PropEase! Your trusted healthcare partner.");
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -255,9 +255,3 @@ body.dark-mode .service-card {
   color: white !important;
 }
 
-/* FLASH CARD FLIP */
-.flipped {
-  transform: rotateY(180deg);
-  transition: transform 0.6s;
-}
-
