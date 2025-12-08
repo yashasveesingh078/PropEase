@@ -339,6 +339,27 @@ body {
   opacity: 0.75;
   color: #e2e8f0;
 }
+/* DARK MODE */
+body.dark-mode {
+  background: #1a1a1a !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer,
+body.dark-mode .property-card,
+body.dark-mode .service-card {
+  background: #333 !important;
+  color: #f1f1f1 !important;
+}
+
+/* FLASH CARD FLIP */
+.flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.6s;
+}
+
+
 
 
 

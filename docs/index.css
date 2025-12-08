@@ -139,7 +139,7 @@ button {
     border-radius: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    width: 100%;
+    width: 100vh;
 }
 
 .field {
@@ -415,6 +415,67 @@ button {
     font-size: 1.4rem;
 }
 
+
+/* ==== MOBILE NAVBAR ==== */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links, .login-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-open .nav-links,
+    .nav-open .login-btn {
+        display: block;
+    }
+
+    .nav-open .nav-container {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+/* DARK MODE */
+body.dark-mode {
+  background: #1a1a1a !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer,
+body.dark-mode .property-card,
+body.dark-mode .service-card {
+  background: #333 !important;
+  color: #f1f1f1 !important;
+}
+
+/* FLASH CARD FLIP */
+.flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.6s;
+}
 
 
 
