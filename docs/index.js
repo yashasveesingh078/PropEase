@@ -1,17 +1,3 @@
-// NAVBAR BURGER MENU
-
-const burger = document.getElementById("burger");
-const navLinks = document.querySelector(".nav-links");
-
-if (burger) {
-    burger.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-    });
-}
-
-
-
-
 // DARK MODE TOGGLE
 
 const themeToggle = document.getElementById("themeToggle");
@@ -28,11 +14,17 @@ if (themeToggle) {
         }
     });
 }
+/* -------------------------
+     SIMPLE BUTTON ALERT
+  ------------------------- */
+  const buttons = document.querySelectorAll("button, .btn-outline, .btn-primary, .login-btn");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      alert("Button clicked!");
+    });
+  });
 
-
-
-
-// SCROLL TO TOP BUTTON
+  // SCROLL TO TOP BUTTON
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -52,16 +44,6 @@ if (scrollTopBtn) {
         });
     });
 }
-// SHOW WELCOME ALERT ONLY ON HOME PAGE
-
-if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
-    window.addEventListener("load", () => {
-        alert("Welcome to PropEase! Your trusted healthcare partner.");
-    });
-}
-
-
-
 
 
 
