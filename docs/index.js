@@ -44,6 +44,13 @@ if (scrollTopBtn) {
         });
     });
 }
+// SHOW WELCOME ALERT ONLY ON HOME PAGE
+
+if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
+    window.addEventListener("load", () => {
+        alert("Welcome to PropEase! Your Dream Home Awaits.");
+    });
+}
 
 
 
